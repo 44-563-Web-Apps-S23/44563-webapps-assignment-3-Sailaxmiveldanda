@@ -88,12 +88,30 @@
     </table>
     <hr>
     <h3> Sample Code Snippet </h3>
-
-    <P> Here is question from Stackover flow Website </P>
-    <blockquote cite = "https://stackoverflow.com/questions/9828831/jquery-on-window-resize" 
+    <h4> Here is question from Stackover flow Website </h4>
+    <blockquote cite = "https://stackoverflow.com/questions/9828831/jquery-on-window-resize" >
     You get events you can bind to during the resizing, but also at the end of resizing. You can fake it 
     by setting a timeout to run the code you want to run when resizing stops. 
     Then clear that timeout every time a resize event fires. That way the timeout will only 
-    finish if that timeout actually finishes.></blockquote>
+    finish if that timeout actually finishes.
+    </blockquote>
+    <p> Link for Snippet Question from Stackover flow: </p>
+    <a href="https://stackoverflow.com/questions/9828831/jquery-on-window-resize"> 
+        Code Snippet Sample Question on Stackoverflow</a>
+        <br>
+        <p> Refrence Link for Snippet:</p>
+    <a href=" https://css-tricks.com/snippets/jquery/done-resizing-event/"> 
+        Click here for the Sample Snippet Reference Link
+    </a>
+    <h4> Display Snippet: </h4>
+    <pre>
+        var resizeTimer;
+        $(window).on('resize', function(e) {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+        // Run code here, resizing has "stopped"
+        }, 250);
+        });
+    </pre>
     </body>
 </html>
